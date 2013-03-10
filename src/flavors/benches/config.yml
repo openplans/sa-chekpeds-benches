@@ -15,12 +15,12 @@ map:
     center:
       lat: 40.76123586961813
       lng: -73.99064540863037
-    zoom: 17
+    zoom: 16
     minZoom: 10
-    maxZoom: 17
+    maxZoom: 22
   base_layer:
-    url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
-    attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+    url: http://{s}.tiles.mapbox.com/v3/doittgis.NYC_DoITT_base/{z}/{x}/{y}.png
+    attribution: 'NYC basemap developed by the Department of Information Technology and Telecommunications. Based on the latest planimetric data.'
   layers: []
 
 # The keys show up in the dropdown list when you are adding a new place
@@ -40,7 +40,7 @@ place_types:
 # for documention of each property. Any omitted property will be undefined.
 place_type_icons:
   bench:
-    iconUrl: /static/css/images/feature-point.png
+    iconUrl: /static/css/images/markers/dot-d849e0.png
     iconSize:
       width: 17
       height: 18
@@ -48,7 +48,7 @@ place_type_icons:
       x: 9
       y: 9
   red:
-    iconUrl: /static/css/images/marker-focused.png
+    iconUrl: /static/css/images/markers/marker-d849e0.png
     shadowUrl: /static/css/images/marker-shadow.png
     iconSize:
       width: 25
