@@ -1,21 +1,21 @@
 # Settings for the app
 app:
   # HTML Title
-  title: Shareabouts
+  title: Request A Bench | CHEKPEDS
   # Header name
-  name: Shareabouts
+  name: Request A Bench in CB4
   # Meta description that will show up in Google search results
   meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
 
 # Settings for map and layer configs
 map:
   geolocation_enabled: true
-  geolocation_onload: true
+  geolocation_onload: false
   options:
     center:
-      lat: 39.9523524
-      lng: -75.1636075
-    zoom: 14
+      lat: 40.76123586961813
+      lng: -73.99064540863037
+    zoom: 17
     minZoom: 10
     maxZoom: 17
   base_layer:
@@ -26,23 +26,20 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    default: blue
+  bench_backless:
+    default: bench
     focused: red
-    label: _(Landmark)
-  park:
-    default: blue
+    label: _(bench)
+  bench_back:
+    default: bench
     focused: red
-    label: _(Park)
-  school:
-    default: blue
-    focused: red
-    label: _(School)
+    label: _(bench)
+  
 
 # Defines place icons. See http://leaflet.cloudmade.com/reference.html#icon
 # for documention of each property. Any omitted property will be undefined.
 place_type_icons:
-  blue:
+  bench:
     iconUrl: /static/css/images/feature-point.png
     iconSize:
       width: 17
@@ -72,55 +69,42 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add a Place)
+  add_button_label: _(Suggest a bench!)
   action_text: _(added)
   title: _(Tell us more...)
-  action_text: _(created)
+  action_text: _(suggested)
   anonymous_name: _(Someone)
-  submit_button_label: _(Submit)
+  submit_button_label: _(Suggest it!)
   items:
-    - prompt: _(Location Name)
-      type: text
+    - prompt: _(Why put a bench here?)
+      type: textarea
+      name: description
+      attrs:
+        - key: placeholder
+          value: _(Explain why a bench is needed here...)
+    - prompt: _(Location details)
+      type: textarea
       name: name
       attrs:
         - key: placeholder
-          value: _(Location Name)
-        - key: size
-          value: 30
-    - prompt: _(Location Type)
+          value: _(Describe location, including the address)
+    - prompt: _(Bench type)
       type: select
       options:
-        - label: _(Landmark)
-          value: landmark
-        - label: _(Park)
-          value: park
-        - label: _(School)
-          value: school
+        - label: _(With Back)
+          value: bench_back
+        - label: _(Backless)
+          value: bench_backless
       name: location_type
-    - prompt: _(Image)
-      inputfile_label: _(Add an Image)
-      type: file
-      name: my_image
-      optional: true
-      attrs:
-        - key: accept
-          value: image/*
     - prompt: _(Your Name)
       type: text
       name: submitter_name
-      optional: true
       attrs:
         - key: placeholder
           value: _(Name)
         - key: size
           value: 30
-    - prompt: _(Description)
-      type: textarea
-      name: description
-      optional: true
-      attrs:
-        - key: placeholder
-          value: _(Description...)
+
 
 survey:
   submission_type: comments
@@ -152,19 +136,6 @@ support:
   anonymous_name: _(Someone)
 
 pages:
-  - title: _(About)
+  - title: _(More info)
     slug: about
     url: /static/pages/overview.html
-    start_page: true
-
-  - title: _(Why Shareabouts?)
-    slug: why
-    url: /static/pages/why.html
-
-  - title: _(Features)
-    slug: features
-    url: /static/pages/features.html
-
-  - title: _(Feedback)
-    external: true
-    url: https://openplans.zendesk.com/anonymous_requests/new
