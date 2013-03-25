@@ -14,8 +14,8 @@ map:
     center:
       lat: 40.7578551941835
       lng: -73.99721145629883
-    zoom: 17
-    minZoom: 11
+    zoom: 16
+    minZoom: 15
     maxZoom: 17
   base_layer:
     url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
@@ -25,9 +25,6 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  Safe Intersection:
-    default: bubblethumb
-    focused: markerthumb
   Unsafe Intersection:
     default: bubbleexclamation
     focused: markerexclaimation
@@ -95,7 +92,7 @@ place:
       optional: false
       attrs:
         - key: placeholder
-          value: For example, NE corner of Adams St and Tillary St
+          value: e.g. 10th Ave and W 38th
         - key: size
           value: 30
     - prompt: Description
@@ -104,73 +101,63 @@ place:
       optional: false
       attrs:
         - key: placeholder
-          value: Give us a brief description of the problem or place, and the approximate time and day when you pass by here.
+          value: Give us a brief description of the problems at this location.
     - prompt: Location Type
       type: select
       options:
         - Unsafe Intersection
-        - Safe Intersection
       name: location_type
 
     - prompt: Traffic Does Not Yield
       type: checkbox
-      optional: true
       name:  traffic_does_not_yield
       attrs:
         - key: value
           value: Traffic Does Not Yield
     - prompt: Bike Lane Blocked
       type: checkbox
-      optional: true
       name: bike_lane_blocked
       attrs:
         - key: value
           value: Bike Lane Blocked
     - prompt: No Bike Lane
       type: checkbox
-      optional: true
       name: no_bike_lane
       attrs:
         - key: value
           value: No Bike Lane
     - prompt: Speeding Traffic
       type: checkbox
-      optional: true
       name: speeding_traffic
       attrs:
         - key: value
           value: Speeding Traffic
     - prompt: Not enough time to cross
       type: checkbox
-      optional: true
       name: not_enough_time_to_cross
       attrs:
         - key: value
           value: Not enough time to cross
     - prompt: Dangerous Crossing
       type: checkbox
-      optional: true
       name: dangerous_crossing
       attrs:
         - key: value
           value: Dangerous Crossing
     - prompt: Sidewalk too small
       type: checkbox
-      optional: true
       name: sidewalk_too_small
       attrs:
         - key: value
           value: Sidewalk too small
     - prompt: Crosswalk Blocked
       type: checkbox
-      optional: true
       name: crosswalk_blocked
       attrs:
         - key: value
           value: Crosswalk Blocked
     - prompt: Double Parked Cars/Trucks
       type: checkbox
-      optional: true
       name: double_parked
       attrs:
         - key: value
@@ -186,7 +173,7 @@ place:
       optional: false
       attrs:
         - key: placeholder
-          value: You must leave name to have your comment be visible to others.
+          value: Your comment
         - key: size
           value: 30
 
@@ -224,63 +211,54 @@ survey:
           value: 30
     - prompt: Traffic Does Not Yield
       type: checkbox
-      optional: true
       name:  traffic_does_not_yield
       attrs:
         - key: value
           value: Traffic Does Not Yield
     - prompt: Bike Lane Blocked
       type: checkbox
-      optional: true
       name: bike_lane_blocked
       attrs:
         - key: value
           value: Bike Lane Blocked
     - prompt: No Bike Lane
       type: checkbox
-      optional: true
       name: no_bike_lane
       attrs:
         - key: value
           value: No Bike Lane
     - prompt: Speeding Traffic
       type: checkbox
-      optional: true
       name: speeding_traffic
       attrs:
         - key: value
           value: Speeding Traffic
     - prompt: Not enough time to cross
       type: checkbox
-      optional: true
       name: not_enough_time_to_cross
       attrs:
         - key: value
           value: Not enough time to cross
     - prompt: Dangerous Crossing
       type: checkbox
-      optional: true
       name: dangerous_crossing
       attrs:
         - key: value
           value: Dangerous Crossing
     - prompt: Sidewalk too small
       type: checkbox
-      optional: true
       name: sidewalk_too_small
       attrs:
         - key: value
           value: Sidewalk too small
     - prompt: Crosswalk Blocked
       type: checkbox
-      optional: true
       name: crosswalk_blocked
       attrs:
         - key: value
           value: Crosswalk Blocked
     - prompt: Double Parked Cars/Trucks
       type: checkbox
-      optional: true
       name: double_parked
       attrs:
         - key: value
@@ -302,7 +280,3 @@ pages:
     slug: about
     url: /static/pages/overview.html
     start_page: true
-
-  - title: Make Brooklyn Safer
-    external: true
-    url: http://MakeBrooklynSafer.org

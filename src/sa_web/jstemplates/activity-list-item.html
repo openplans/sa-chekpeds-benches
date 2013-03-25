@@ -1,25 +1,18 @@
       <li class="activity-item clearfix">
         {{# data }}
-        {{# is_place }}
-        <img class="ticker-img" src="/static/css/images/bench-new.jpg">
-        {{/ is_place }}
-        
-        {{^ is_place }}
-        <img class="ticker-img" src="/static/css/images/bench-support.jpg">
-        {{/ is_place }}
         
           <a href="/place/{{ place_id }}">{{#_}}<strong>
           {{ submitter_name }}
           </strong>
           {{# is_place }}
              {{ action }} a{{# place.type_starts_with_vowel }}n{{/ place.type_starts_with_vowel }} <span class="place-type">{{ place.place_type_label }}</span>
-            {{# place.name }} near <span class="place-name">{{ place.name }}</span>{{/ place.name }} 
+            {{# place.intersection_name }} at <span class="place-name">{{ place.intersection_name }}</span>{{/ place.intersection_name }} 
           {{/ is_place }}
 
           {{^ is_place }}
-            {{ action }} the bench near 
-            {{# place.name }}<span class="place-name">{{ place.name }}</span>{{/ place.name }}
-            {{^ place.name }}a{{# place.type_starts_with_vowel }}n{{/ place.type_starts_with_vowel }} {{ place.place_type_label }}{{/ place.name }}
+            {{ action }}  
+            {{# place.intersection_name }}<span class="place-name">{{ place.intersection_name }}</span>{{/ place.intersection_name }}
+            {{^ place.intersection_name }}a{{# place.type_starts_with_vowel }}n{{/ place.type_starts_with_vowel }} {{ place.place_type_label }}{{/ place.intersection_name }}
           {{/ is_place }}
           {{/_}}</a>
         {{/ data }}
