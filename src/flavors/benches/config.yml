@@ -79,23 +79,27 @@ place:
     - prompt: _(Why put a bench here?)
       type: textarea
       name: description
+      label: _(Why put a bench here?)
       attrs:
         - key: placeholder
           value: _(Explain why a bench is needed here...)
     - prompt: _(Describe location)
       type: textarea
       name: name
+      label: _(Describe location)
       attrs:
         - key: placeholder
           value: _(Describe location)
     - prompt: _(Write out location address)
       type: textarea
       name: address
+      label: _(Location address)
       attrs:
         - key: placeholder
           value: _(Address)
     - prompt: _(Bench type)
       type: select
+      label: _(Bench type)
       options:
         - label: _(With Back)
           value: bench_back
@@ -103,6 +107,7 @@ place:
           value: bench_backless
       name: location_type
     - prompt: _(Bench orientation)
+      label: _(Bench orientation)
       type: select
       options:
         - label: _(Near Curb)
@@ -111,6 +116,7 @@ place:
           value: bench_backless
       name: bench_orientation
     - prompt: _(Your Name)
+      label: _(Name)
       type: text
       name: submitter_name
       attrs:
@@ -120,7 +126,7 @@ place:
           value: 30
     - prompt: _(Your Email (required))
       type: text
-      name: private_submitter_name
+      name: private-email
       attrs:
         - key: placeholder
           value: _(Email)
