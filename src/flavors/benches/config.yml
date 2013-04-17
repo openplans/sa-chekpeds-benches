@@ -5,7 +5,7 @@ app:
   # Header name
   name: Request A Bench in CB4
   # Meta description that will show up in Google search results
-  meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: _(Where do you want to see benches in Hell's Kitchen?)
 
 # Settings for map and layer configs
 map:
@@ -139,3 +139,6 @@ pages:
   - title: _(More info)
     slug: about
     url: /static/pages/overview.html
+  - title: _(Siting requirements)
+    slug: requirements
+    url: /static/pages/requirements.html
